@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Import CSS and JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="../src/main.js" defer></script>
+  </head>
+  <body
+    class="overflow-x-hidden scroll-smooth m-0 bg-white text-navy font-inter"
+  >
+    <!-- HEADER -->
+    <header id="appScroll">
+      <!-- NAVBAR -->
+      <nav
+        class="fixed top-0 left-0 w-full z-50 bg-white/90 border-b border-silver/30"
+        id="navbar"
+      >
+        <div
+          class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <a href="" class="text-xl font-bold tracking-tight" id="navLogo">
+            PORTFOLIO
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#about" class="nav-link text-sm font-medium text-navy/70"
+              >About</a
+            >
+            <a href="#skills" class="nav-link text-sm font-medium text-navy/70"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-sm font-medium text-navy/70"
+              >Projects</a
+            >
+            <a
+              href="#education"
+              class="nav-link text-sm font-medium text-navy/70"
+              >Education</a
+            >
+            <a href="#contact" class="nav-link text-sm font-medium text-navy/70"
+              >Contact</a
+            >
+          </div>
+          <button
+            id="menuBtn"
+            class="md:hidden p-2 rounded-lg hover:bg-silver/20 transition-colors"
+            aria-label="Open menu"
+          >
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- MOBILE NAV -->
+      <div
+        class="mobile-nav fixed inset-0 z-50 bg-navy/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8"
+        id="mobileNav"
+      >
+        <button
+          id="closeMenuBtn"
+          class="absolute top-6 right-6 text-white p-2"
+          aria-label="Close menu"
+        >
+          <i data-lucide="x" class="w-7 h-7"></i>
+        </button>
+        <a
+          href="#about"
+          class="mobile-link text-2xl font-semibold text-white hover:text-accent transition-colors"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link text-2xl font-semibold text-white hover:text-accent transition-colors"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="mobile-link text-2xl font-semibold text-white hover:text-accent transition-colors"
+          >Projects</a
+        >
+        <a
+          href="#education"
+          class="mobile-link text-2xl font-semibold text-white hover:text-accent transition-colors"
+          >Education</a
+        >
+        <a
+          href="#contact"
+          class="mobile-link text-2xl font-semibold text-white hover:text-accent transition-colors"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- HERO -->
+      <section
+        id="hero"
+        class="relative w-full min-h-screen flex items-center overflow-hidden pt-20"
+      >
+        <div class="max-w-6xl mx-auto px-6 py-20 w-full">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="flex-1 text-center lg:text-left">
+              <p
+                class="fade-up [animation-delay:0.1s] text-accent font-semibold text-sm uppercase tracking-widest mb-4"
+              >
+                Welcome to my portfolio
+              </p>
+              <h1
+                class="fade-up [animation-delay:0.2s] text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4"
+                id="heroName"
+              >
+                DUONG NGUYEN TAN DAT
+              </h1>
+              <p
+                class="fade-up [animation-delay:0.3s] text-xl md:text-2xl font-medium text-navy/60 mb-6"
+                id="heroTitle"
+              >
+                Computer Science student | Aspiring Backend Developer
+              </p>
+              <div
+                class="fade-up [animation-delay:0.5s] flex flex-wrap gap-4 justify-center lg:justify-start"
+              >
+                <a
+                  href="#projects"
+                  class="cta-pulse inline-flex items-center gap-2 bg-accent text-white font-semibold px-7 py-3.5 rounded-full hover:bg-orange-600 transition-colors"
+                >
+                  <i data-lucide="folder-open" class="w-4 h-4"></i>
+                  View My Projects
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-flex items-center gap-2 border-2 border-navy/20 text-navy font-semibold px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-colors"
+                >
+                  <i data-lucide="download" class="w-4 h-4"></i>
+                  Download CV
+                </a>
+              </div>
+            </div>
+
+            <!-- Avatar illustration -->
+            <div class="fade-up fade-up-d3">
+              <div class="w-56 h-56 md:w-72 md:h-72 rounded-full">
+                <img src="./Anh.jpg" alt="avatar" class="rounded-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section-hidden w-full py-24 bg-gray-50/80">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-12">
+            <div class="w-10 h-1 bg-accent rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-bold">About Me</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2">
+              <p
+                class="text-lg leading-relaxed text-navy/70 mb-6 max-w-150"
+                id="aboutText"
+              >
+                I am a third-year computer science student at Ho Chi Minh City
+                University of Technology. My current goal is to find an
+                internship opportunity to study and apply my knowledge to a
+                real-world environment and develop my skills more deeply.
+                <br />
+                <br />
+                Starting from a basic web programming background such as: HTML5,
+                CSS3, JavaScript, Python, PHP, I am currrently upgrading my
+                skills through modern frameworks such as: Django, Next.js and
+                NestJS. My long-term goal is to design highly scalable systems,
+                optimizing performance, and building robust backend solutions
+                for millions of users.
+              </p>
+            </div>
+            <div class="space-y-4" id="displayAchievements">
+              <!-- GPA and IELTS Academic -->
+              <!-- displayAchievements function -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section-hidden w-full py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-12">
+            <div class="w-10 h-1 bg-accent rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-bold">Skills</h2>
+          </div>
+          <div
+            class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            id="displaySkills"
+          >
+            <!-- displaySkills -->
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section-hidden w-full py-24 bg-gray-50/80">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-12">
+            <div class="w-10 h-1 bg-accent rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-bold">Projects</h2>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8" id="displayProjects">
+            <!-- Projects injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section-hidden w-full py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-12">
+            <div class="w-10 h-1 bg-accent rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Education &amp; Achievements
+            </h2>
+          </div>
+          <div class="space-y-6">
+            <div
+              class="bg-white rounded-2xl p-8 shadow-sm border border-silver/20 flex flex-col md:flex-row gap-6"
+            >
+              <div
+                class="w-16 h-16 rounded-xl bg-navy flex items-center justify-center shrink-0"
+              >
+                <i data-lucide="building-2" class="w-7 h-7 text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-1">
+                  Ho Chi Minh City University of Technology (HCMUT)
+                </h3>
+                <p class="text-accent font-medium mb-2">
+                  Computer Science — GPA: 3.3/4.0
+                </p>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div
+                class="bg-white rounded-2xl p-6 shadow-sm border border-silver/20"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center"
+                  >
+                    <i data-lucide="award" class="w-5 h-5 text-green-500"></i>
+                  </div>
+                  <h4 class="font-bold">OISP Scholarship</h4>
+                </div>
+                <p class="text-sm text-navy/60">
+                  Scholarships are awarded to students with outstanding academic
+                  achievements in international programs taught and conducted in
+                  English.
+                </p>
+              </div>
+              <div
+                class="bg-white rounded-2xl p-6 shadow-sm border border-silver/20"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center"
+                  >
+                    <i
+                      data-lucide="languages"
+                      class="w-5 h-5 text-blue-500"
+                    ></i>
+                  </div>
+                  <h4 class="font-bold">IELTS 6.0</h4>
+                </div>
+                <p class="text-sm text-navy/60">
+                  Ability to communicate and work effectively in an
+                  international environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section-hidden w-full py-24 bg-navy text-white"
+      >
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <div class="w-10 h-1 bg-accent rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-bold">Contact me</h2>
+            <div class="w-10 h-1 bg-accent rounded-full"></div>
+          </div>
+          <p class="text-white/60 max-w-md mx-auto mb-12">
+            I am always open to collaboration. Please feel free to contact me!
+          </p>
+          <div
+            class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto"
+          >
+            <a
+              href="mailto:dat.duongtandat385@gmail.com"
+              class="group bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-2xl p-6 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/30 transition-colors"
+              >
+                <i data-lucide="mail" class="w-5 h-5 text-accent"></i>
+              </div>
+              <p class="font-semibold text-sm mb-1">Email</p>
+              <p class="text-xs text-white/50 break-all" id="contactEmail">
+                dat.duongtandat385@gmail.com
+              </p></a
+            >
+            <a
+              id="contactGithubLink"
+              href="https://github.com/datduongabc"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-2xl p-6 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/30 transition-colors"
+              >
+                <i data-lucide="github" class="w-5 h-5 text-accent"></i>
+              </div>
+              <p class="font-semibold text-sm mb-1">GitHub</p>
+              <p class="text-xs text-white/50" id="contactGithub">
+                github.com/datduongabc
+              </p></a
+            >
+            <a
+              href="https://www.linkedin.com/in/duongtandat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-2xl p-6 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/30 transition-colors"
+              >
+                <i data-lucide="linkedin" class="w-5 h-5 text-accent"></i>
+              </div>
+              <p class="font-semibold text-sm mb-1">LinkedIn</p>
+              <p class="text-xs text-white/50">
+                linkedin.com/in/duongtandat
+              </p></a
+            >
+            <a
+              href="tel:0819152362"
+              class="group bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-2xl p-6 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/30 transition-colors"
+              >
+                <i data-lucide="phone" class="w-5 h-5 text-accent"></i>
+              </div>
+              <p class="font-semibold text-sm mb-1">Phone</p>
+              <p class="text-xs text-white/50" id="contactPhone">
+                0819-152-362
+              </p></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full py-6 bg-navy border-t border-white/10 text-center">
+      <p class="text-white/30 text-sm">© 2026 Duong Nguyen Tan Dat.</p>
+    </footer>
+  </body>
+</html>
