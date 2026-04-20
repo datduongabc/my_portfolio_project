@@ -99,7 +99,7 @@ const projects = [
     desc: "The web system focuses on the employer recruitment process and the job seeker search experience. The project emphasizes building a standardized data structure that allows for detailed job posting management and multi-criteria search filtering.",
     color: "from-blue-400 to-indigo-500",
     icon: "briefcase",
-    github: "https://github.com/datduongabc/course-online",
+    github: "https://github.com/dngphuc05/course-online",
   },
 ];
 
