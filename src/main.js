@@ -91,7 +91,7 @@ const projects = [
     desc: "This is a complete dynamic website, allowing users to explore the menu, search for dishes, and manage their personal accounts. The project focuses on applying core web technologies such as PHP, MySQL, and AJAX to create a smooth and highly interactive user experience.",
     color: "from-orange-400 to-red-500",
     icon: "utensils",
-    github: "https://github.com/datduongabc/food-ordering-website",
+    github: "https://github.com/datduongabc/restaurant_project",
   },
   {
     title: "Job Vacancy Management System",
@@ -99,7 +99,7 @@ const projects = [
     desc: "The web system focuses on the employer recruitment process and the job seeker search experience. The project emphasizes building a standardized data structure that allows for detailed job posting management and multi-criteria search filtering.",
     color: "from-blue-400 to-indigo-500",
     icon: "briefcase",
-    github: "https://github.com/datduongabc/job-vacancy-management-system",
+    github: "https://github.com/datduongabc/course-online",
   },
 ];
 
